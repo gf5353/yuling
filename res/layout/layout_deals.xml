@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/black" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager_deals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_viewpager_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_deals_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#AA363636"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:text="团购描述1111111111111111"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_deals_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_deals_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="￥88"
+                    android:textColor="@color/orange"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_deals_price_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_deals_price"
+                    android:text="￥100"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <Button
+                    style="@style/btn_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="立即抢购" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ly_deals_refund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_deals_overdue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/mini_check_selected"
+                    android:gravity="center"
+                    android:text="过期退"
+                    android:textColor="@color/actionbar_color_o"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_deals_anytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/mini_check_selected"
+                    android:gravity="center"
+                    android:text="随时退"
+                    android:textColor="@color/actionbar_color_o" />
+
+                <TextView
+                    android:id="@+id/tv_deals_appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/mini_check_selected"
+                    android:gravity="center"
+                    android:text="免预约"
+                    android:textColor="@color/actionbar_color_o" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_deals_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/mini_checkbox_disable"
+                android:gravity="center"
+                android:text="已售22121"
+                android:textColor="@android:color/darker_gray" />
+
+            <include layout="@layout/line_black" />
+
+            <TextView
+                android:id="@+id/tv_deals_special_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/darker_gray" />
+
+            <include layout="@layout/line_black" />
+
+            <ListView
+                android:id="@+id/list_deals_businesses"
+                style="@style/style_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_deals_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/tv_deals_price_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="￥88"
+                android:textColor="@color/orange"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_deals_price_old_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_deals_price_down"
+                android:text="￥100"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_deals_down"
+                style="@style/btn_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="立即抢购" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_black" />
+    </LinearLayout>
+
+</FrameLayout>

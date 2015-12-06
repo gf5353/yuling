@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/org.example.yulin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/rippleView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/selector_btn"
+        android:gravity="center"
+        android:text="QQ"
+        android:textColor="@drawable/selector_btn"
+        android:textSize="80sp" />
+
+    <include layout="@layout/line_black" />
+
+    <TextView
+        android:id="@+id/btn_sina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/selector_btn"
+        android:gravity="center"
+        android:text="新浪微博"
+        android:textColor="@drawable/selector_btn"
+        android:textSize="65sp" />
+
+</LinearLayout>
